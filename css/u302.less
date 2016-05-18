@@ -84,19 +84,17 @@ img {
         .fl;
         margin: auto auto auto 29%;
         .active{
+          color:#0EBFAA;
           border-bottom: 2px solid #0EBFAA;
         }
         li{
-          width:37px;
-          height:32px;
-          line-height: 32px;
+          padding: 10px;
           font-size: 12px;
           color: #fff;
           text-align: center;
-          margin:0 3px;
           .fl;
           &:hover{
-            border-bottom: 2px solid #0EBFAA;
+            .active;
           } 
         }
       }
@@ -175,6 +173,9 @@ img {
       font-size: 11px;
       padding-bottom: 37px;
       word-wrap: break-word;
+      &:hover{
+        text-decoration: underline;
+      }
       .pic{
           height:173px;
           overflow: hidden;
@@ -183,6 +184,7 @@ img {
           &:hover {
             transition: all .3s linear 0.3s;
             transform: scale(1.2);
+            opacity: 0.8;
           }  
       }
       
@@ -241,6 +243,13 @@ img {
   }
   .way{
     padding: 92px 0 112px;
+    &:hover{
+      padding: 92px 0 92px;
+      border-radius:10px;
+      transition:0.8s;
+      opacity: 0.8;
+      background-color:#02CDB3; 
+    }
     .icon img{
       width: auto;
       height: 27px;
@@ -292,11 +301,12 @@ footer{
   } 
 }
 @media (min-width: 1200px){
- // .container {
- //  width: 1170px;
- //  } 
   .container {
     width: 834px;
-  } 
-   
+  }    
+}
+@media (min-width: 1440px){
+  .container {
+  width: 1000px;
+  }
 }

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	//var loading = $(".loading");
-	$(window).scroll(function () {
+	//$(window).scroll(function () {
 		//滚动了多少距离
 	 //    var scrollTop = $(this).scrollTop();
 	 //    var contactHeight = $(".contact").height(),
@@ -24,11 +24,11 @@ $(document).ready(function(){
 		//         loading.css("display","none");
 		//     }
 		// }
-		if(($(window).scrollTop() + $(window).height()) == $(document).height())
-		{
-			$("#fluid").gridalicious('append', makeboxes());
-		}
-	});
+		// if(($(window).scrollTop() + $(window).height()) == $(document).height())
+		// {
+		// 	$("#fluid").gridalicious('append', makeboxes());
+		// }
+	//});
 	//主要部分
 	$("#fluid").gridalicious({
         gutter: 15,
