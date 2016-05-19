@@ -29,7 +29,7 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-img {
+.header img,.bg.img,#fluid img,.gacolumn img,.container img,.contact img,footer img {
   display: block;
   width: 100%;
   border:0;
@@ -175,19 +175,18 @@ img {
       word-wrap: break-word;
       &:hover{
         text-decoration: underline;
+        img{
+          transition: all .3s linear 0.3s;
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
       }
       .pic{
           height:173px;
           overflow: hidden;
         img{
           height:100%;
-          &:hover {
-            transition: all .3s linear 0.3s;
-            transform: scale(1.2);
-            opacity: 0.8;
-          }  
-      }
-      
+        }
       }
       .title{
         font-size: 13px;
@@ -280,8 +279,11 @@ footer{
      margin: auto 0 auto auto;
      float: right;
   }
-  .contact .way {
-    padding: 50px 0;
+  .contact .way:hover{
+    padding: 92px 0 112px;
+  }
+  .contact .row{
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 768px){
