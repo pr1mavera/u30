@@ -27,7 +27,7 @@ var Page = (function() {
 		$navNext = $( '#bb-nav-next' ),
 		$navPrev = $( '#bb-nav-prev' ).hide(),
 		$menuItems = $LB_container.find( 'ul.menu-toc > li' ),
-		$tblcontents = $( '#tblcontents' ),
+		$PM_tblcontents = $( '#PM_tblcontents' ),
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -78,7 +78,7 @@ var Page = (function() {
 		} );
 
 		// show table of contents
-		$tblcontents.on( 'click', toggleTOC );
+		$PM_tblcontents.on( 'click', toggleTOC );
 
 		// click a menu item
 		// $menuItems.on( 'click', function() {
@@ -174,3 +174,40 @@ var Page = (function() {
 	return { init : init };
 
 })();
+
+$(function() {
+
+    Page.init();
+
+});
+
+$('.special-button').click(function(){
+  
+  if($('.special-button_bottom').hasClass('active')){
+    $(".st0").attr("class", "st0");
+  }else{
+    $(".st0").attr("class", "st0 active");
+  }
+  $('.special-button_top').toggleClass("active");
+  $('.special-button_bottom').toggleClass("active");
+
+  if($('body').hasClass('oy')){
+    $("body").removeClass("oy");
+  }else{
+    $("body").addClass("oy");
+  }
+});
+//只在header区域内显示汉堡菜单，滚动出了就看不到了
+$(document).ready(function(){	
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop(),
+			menu_btn = $("#PM_tblcontents"),
+			header = $(".h_content");
+		var height = parseInt(header.css("height"));
+		if(scrollTop>=height){
+			menu_btn.css("display","none");
+		}else{
+			menu_btn.css("display","block");
+		}
+	})
+})
