@@ -912,8 +912,9 @@ body em,body h3{
 
 .menu-panel {
   background: #202020;
+  display: block;
   width: 240px;
-  /*height: 100%;*/
+  height: 100%;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -924,6 +925,7 @@ body em,body h3{
 .menu-panel_box{
   /*position: fixed;*/
   width: 100%;
+  margin-top: 40px;
 }
 
 .menu-panel .menu-panel_box p{
@@ -2116,8 +2118,8 @@ transform: scale(1.0);
 }
 
 .PM_main {
-    width: 90%;
-    padding: 0 5%;
+    width: 100%;
+    /*padding: 0 5%;*/
 }
 
 .h_content {
